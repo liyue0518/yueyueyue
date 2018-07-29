@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="ipt">
+<ul>
+    <li>iphone8</li>
+    <li>iphoneX</li>
+    <li>huawei</li>
+    <li>xiaomi</li>
+</ul>
+<script src="jquery-1.12.4.js"></script>
+<script>
+    $(function(){
+     $('#ipt').on('keyup',function(){
+         var value = $(this).val();
+         $('li').css('color','');
+         if(value != ''){
+             $('li:contains('+value+')').css('color','red');
+         }
+     });
+    })
+</script>
+
+</body>
+</html>
